@@ -361,7 +361,7 @@ app.use(bodyParser.json());
 app.use(enableCORS);
 
 // Route to handle POST requests for chat completions
-app.post("/v1/chat/completions", handleChatCompletion);
+app.post("/api/v1/chat/completions", handleChatCompletion);
 
 // 404 handler for unmatched routes
 app.use((req, res) =>
@@ -378,8 +378,8 @@ app.use((req, res) =>
 app.listen(port, async () => {
   console.log(`💡 Server is running at http://localhost:${port}`);
   console.log();
-  console.log(`🔗 Local Base URL: http://localhost:${port}/v1`);
-  console.log(`🔗 Local Endpoint: http://localhost:${port}/v1/chat/completions`);
+  console.log(`🔗 Local Base URL: http://localhost:${port}/api/v1`);
+  console.log(`🔗 Local Endpoint: http://localhost:${port}/api/v1/chat/completions`);
   console.log();
   console.log("📝 Original TS Source By: Pawan.Krd");
   console.log("📝 Modified By: Vincent");
